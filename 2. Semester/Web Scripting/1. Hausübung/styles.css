@@ -1,0 +1,15 @@
+body {
+    margin: 15px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.operator {
+    margin-bottom: 10px;
+}
+
+.eingabe {
+    width: fit-content;
+}

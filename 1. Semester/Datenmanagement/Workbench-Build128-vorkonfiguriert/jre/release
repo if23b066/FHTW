@@ -1,0 +1,2 @@
+JAVA_VERSION="17.0.7"
+MODULES="java.base java.compiler java.datatransfer java.xml java.prefs java.desktop java.logging java.management java.security.sasl java.naming java.net.http java.security.jgss java.transaction.xa java.sql java.sql.rowset java.xml.crypto jdk.charsets jdk.crypto.ec jdk.crypto.cryptoki jdk.crypto.mscapi jdk.management jdk.naming.dns jdk.net jdk.security.auth jdk.security.jgss jdk.unsupported jdk.xml.dom jdk.zipfs"

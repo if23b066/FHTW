@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Taschenrechner mit JS!</title>
+</head>
+
+<body>
+    <div>
+        <h1>Taschenrechner</h1>
+        <form class="operator">
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary" type="button" onclick="addiere()">+</button>
+                <button class="btn btn-primary" type="button" onclick="subtrahiere()">-</button>
+                <button class="btn btn-primary" type="button" onclick="multipliziere()">·</button>
+                <button class="btn btn-primary" type="button" onclick="dividiere()">÷</button>
+            </div>
+        </form>
+        <form class="eingabe">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Erste Zahl</span>
+                <input type="text" id="ersteZahl" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Zweite Zahl</span>
+                <input type="text" id="zweiteZahl" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div>
+                <input class="form-control" type="text" id="ergebnis" value="Ergebnis"
+                    aria-label="readonly input example" readonly>
+            </div>
+        </form>
+        <form class="verlauf">
+            <div class="d-grid gap-2 d-md-block">
+                <ul id="list">
+
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
