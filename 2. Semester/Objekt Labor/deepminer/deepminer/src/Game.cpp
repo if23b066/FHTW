@@ -11,7 +11,7 @@ void Game::showIntro()
 {
     std::cout << "Welcome to DeepMiner!" << std::endl;
     std::cout << "\nYou are a miner in a deep mine.\n Your goal is to collect as many valuable minerals as possible." << std::endl;
-
+    system("pause");
     std::cout << "Choose your Mode: \nPlayer vs CPU  (1) \nCPU vs CPU (2)" << std::endl;
 }
 
