@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1711010806 source:c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbsp1\programmierbsp1\main.cpp
+	<iostream>
+	"Menu.h"
+	"Stock.h"
+	"HashTable.h"
+
+1711011031 c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbsp1\programmierbsp1\include\menu.h
+	"HashTable.h"
+
+1711011011 c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbsp1\programmierbsp1\include\hashtable.h
+	<vector>
+	<string>
+	"Stock.h"
+
+1711011047 c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbsp1\programmierbsp1\include\stock.h
+	<string>
+	<vector>
+

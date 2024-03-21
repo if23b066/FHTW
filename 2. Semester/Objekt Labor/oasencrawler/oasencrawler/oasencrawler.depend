@@ -33,3 +33,29 @@
 
 1709576703 c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\include\enemy.h
 
+1710953575 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\src\enemy.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"Enemy.h"
+	"Player.h"
+	"World.h"
+
+1710953575 c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\include\enemy.h
+
+1710953575 c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\include\player.h
+
+1710953575 c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\include\world.h
+
+1710953575 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\src\player.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1710953575 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\src\world.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
