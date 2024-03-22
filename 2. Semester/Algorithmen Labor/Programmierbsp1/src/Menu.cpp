@@ -23,16 +23,19 @@ void Menu::selectProgram()
     {
     case 'a':
         system("cls");
-        hashtable.manualInput();
-        hashtable.add("key", "name", "wkn", "acro", 100);
-        std::cout << "\nStock has been added!\n"
-                  << std::endl;
+        hashtable.add("name", "wkn", "acro");
+        std::cout << "\nStock has been added!" << std::endl;
+        std::cout << "\n";
         system("pause");
         system("cls");
         break;
     case 'd':
         system("cls");
-        // delete();
+        // remove();
+        std::cout << "\nStock has been deleted!" << std::endl;
+        std::cout << "\n";
+        system("pause");
+        system("cls");
         break;
     case 'i':
         system("cls");

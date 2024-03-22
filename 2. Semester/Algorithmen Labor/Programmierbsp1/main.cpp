@@ -3,8 +3,6 @@
 #include "Menu.h"
 #include "HashTable.h"
 
-#define HASHSIZE 20
-
 int main()
 {
     Menu *menu = new Menu;

@@ -1,12 +1,14 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
+#include <cstdlib>
 
 #include "HashTable.h"
 
-#define HASHSIZE 20
+#define HASHSIZE 50
 
-HashTable::HashTable()
+HashTable::HashTable() // Konstruktor
 {
     for (int i = 0; i < HASHSIZE; ++i)
     {
@@ -14,45 +16,64 @@ HashTable::HashTable()
     }
 }
 
-int HashTable::hash(const std::string &key)
+int HashTable::hash(int num) // Berechnung der Hashtabelle
 {
-    int hash = 0;
-    for (char c : key)
+    int key;
+    return key = num % HASHSIZE;
+}
+
+void HashTable::add(const std::string &name, const std::string &wkn, const std::string &acro) // Hinzufügen eines Eintrags
+{
+    std::string inputName, inputWkn, inputAcro;
+
+    while (true)
     {
-        hash += c;
+        std::cout << "Enter name: ";
+        std::cin >> inputName;
+        if (inputName.length() > 0)
+        {
+            break;
+        }
+        else
+        {
+            std::cout << "Invalid Input!" << std::endl;
+        }
     }
-    return hash % HASHSIZE;
-}
 
-void HashTable::manualInput()
-{
-    std::string key, name, wkn, acro;
-    int value;
+    while (true)
+    {
+        std::cout << "Enter WKN: ";
+        std::cin >> inputWkn;
+        if (inputWkn.length() > 0)
+        {
+            break;
+        }
+        else
+        {
+            std::cout << "Invalid Input!" << std::endl;
+        }
+    }
 
-    std::cout << "Enter key: ";
-    std::cin >> key;
+    while (true)
+    {
+        std::cout << "Enter acronym: ";
+        std::cin >> inputAcro;
+        if (inputAcro.length() > 0 && inputAcro.length() < 3)
+        {
+            break;
+        }
+        else
+        {
+            std::cout << "Invalid Input!" << std::endl;
+        }
+    }
 
-    std::cout << "Enter name: ";
-    std::cin >> name;
+    int num = rand() % 900 + 100; // generiert Zufälligen Schlüssel
 
-    std::cout << "Enter WKN: ";
-    std::cin >> wkn;
-
-    std::cout << "Enter acronym: ";
-    std::cin >> acro;
-
-    std::cout << "Enter value: ";
-    std::cin >> value;
-
-    add(key, name, wkn, acro, value);
-}
-
-void HashTable::add(const std::string &key, const std::string &name, const std::string &wkn, const std::string &symbol, int value)
-{
-    int index = hash(key);
+    int index = hash(num);
     if (table[index] == nullptr)
     {
-        table[index] = new HashEntry(key, name, wkn, symbol, value);
+        table[index] = new HashEntry(inputName, inputWkn, inputAcro);
     }
     else
     {
@@ -61,11 +82,11 @@ void HashTable::add(const std::string &key, const std::string &name, const std::
         {
             entry = entry->next;
         }
-        entry->next = new HashEntry(key, name, wkn, symbol, value);
+        entry->next = new HashEntry(inputName, inputWkn, inputAcro);
     }
 }
 
-HashTable::~HashTable()
+HashTable::~HashTable() // Destruktor
 {
     for (int i = 0; i < HASHSIZE; ++i)
     {
