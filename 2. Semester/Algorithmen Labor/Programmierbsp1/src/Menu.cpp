@@ -26,16 +26,14 @@ void Menu::selectProgram()
         hashtable.add("name", "wkn", "acro");
         std::cout << "\nStock has been added!" << std::endl;
         std::cout << "\n";
-        system("pause");
-        system("cls");
+        reset();
         break;
     case 'd':
         system("cls");
         // remove();
         std::cout << "\nStock has been deleted!" << std::endl;
         std::cout << "\n";
-        system("pause");
-        system("cls");
+        reset();
         break;
     case 'i':
         system("cls");
@@ -43,7 +41,8 @@ void Menu::selectProgram()
         break;
     case 's':
         system("cls");
-        // search();
+        hashtable.search();
+        reset();
         break;
     case 'p':
         system("cls");
@@ -63,6 +62,12 @@ void Menu::selectProgram()
         std::cout << "Invalid choice" << std::endl;
         break;
     }
+}
+
+void Menu::reset()
+{
+    system("pause");
+    system("cls");
 }
 
 Menu::~Menu()

@@ -23,6 +23,7 @@ public:
 
     int hash(int key);
     void add(const std::string &name, const std::string &wkn, const std::string &acro);
+    void search();
 
 protected:
 private:

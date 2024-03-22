@@ -26,37 +26,15 @@ void HashTable::add(const std::string &name, const std::string &wkn, const std::
 {
     std::string inputName, inputWkn, inputAcro;
 
-    while (true)
-    {
-        std::cout << "Enter name: ";
-        std::cin >> inputName;
-        if (inputName.length() > 0)
-        {
-            break;
-        }
-        else
-        {
-            std::cout << "Invalid Input!" << std::endl;
-        }
-    }
+    std::cout << "Enter name: ";
+    std::cin >> inputName;
+
+    std::cout << "\nEnter WKN: ";
+    std::cin >> inputWkn;
 
     while (true)
     {
-        std::cout << "Enter WKN: ";
-        std::cin >> inputWkn;
-        if (inputWkn.length() > 0)
-        {
-            break;
-        }
-        else
-        {
-            std::cout << "Invalid Input!" << std::endl;
-        }
-    }
-
-    while (true)
-    {
-        std::cout << "Enter acronym: ";
+        std::cout << "\nEnter acronym: ";
         std::cin >> inputAcro;
         if (inputAcro.length() > 0 && inputAcro.length() < 3)
         {
@@ -64,7 +42,7 @@ void HashTable::add(const std::string &name, const std::string &wkn, const std::
         }
         else
         {
-            std::cout << "Invalid Input!" << std::endl;
+            std::cout << "\nInvalid Input!" << std::endl;
         }
     }
 
@@ -84,6 +62,26 @@ void HashTable::add(const std::string &name, const std::string &wkn, const std::
         }
         entry->next = new HashEntry(inputName, inputWkn, inputAcro);
     }
+}
+
+void HashTable::search()
+{
+    std::string searchEntry;
+    std::cout << "Enter the name or acronym to search: ";
+    std::cin >> searchEntry;
+
+    int index = hash(searchEntry.length());
+    HashEntry *entry = table[index];
+    while (entry != nullptr)
+    {
+        if (entry->name == searchEntry || entry->acro == searchEntry)
+        {
+            std::cout << "Entry found: " << entry->name << ", " << entry->wkn << ", " << entry->acro << std::endl;
+            return;
+        }
+        entry = entry->next;
+    }
+    std::cout << "Entry not found." << std::endl;
 }
 
 HashTable::~HashTable() // Destruktor

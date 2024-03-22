@@ -11,6 +11,7 @@ public:
 
     void showMenu();
     void selectProgram();
+    void reset();
 
     char choice;
 
