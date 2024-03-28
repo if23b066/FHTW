@@ -2,8 +2,9 @@
 #define MENU_H
 
 #include "HashTable.h"
+#include "Programs.h"
 
-class Menu : public HashTable
+class Menu : public Programs
 {
 public:
     Menu();
@@ -14,9 +15,6 @@ public:
     void reset();
 
     char choice;
-
-protected:
-private:
 };
 
 #endif // MENU_H

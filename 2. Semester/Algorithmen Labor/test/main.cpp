@@ -5,8 +5,7 @@
 
 int main()
 {
-    Menu *menu = new Menu;
-    HashTable *hashtable = new HashTable;
+    Menu *menu = new Menu();
 
     do
     {
@@ -15,7 +14,6 @@ int main()
         menu->selectProgram();
     } while (menu->choice != 'x');
 
-    delete hashtable;
     delete menu;
     return 0;
 }

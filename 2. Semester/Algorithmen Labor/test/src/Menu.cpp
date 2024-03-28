@@ -1,7 +1,7 @@
 #include <iostream>
+#include <string>
 
 #include "Menu.h"
-#include "HashTable.h"
 
 Menu::Menu()
 {
@@ -17,13 +17,11 @@ void Menu::selectProgram()
 {
     std::cin >> choice;
 
-    HashTable hashtable;
-
     switch (choice)
     {
     case 'a':
         system("cls");
-        hashtable.add("name", "wkn", "acro");
+        add();
         std::cout << "\nStock has been added!" << std::endl;
         std::cout << "\n";
         reset();
@@ -41,7 +39,7 @@ void Menu::selectProgram()
         break;
     case 's':
         system("cls");
-        hashtable.search();
+        // search();
         reset();
         break;
     case 'p':
