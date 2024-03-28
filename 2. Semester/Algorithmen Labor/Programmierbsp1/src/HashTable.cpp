@@ -64,7 +64,7 @@ void HashTable::add(const std::string &name, const std::string &wkn, const std::
     }
 }
 
-void HashTable::search()
+void HashTable::search() // durchsuchen der Hashtabelle
 {
     std::string searchEntry;
     std::cout << "Enter the name or acronym to search: ";
@@ -76,7 +76,7 @@ void HashTable::search()
     {
         if (entry->name == searchEntry || entry->acro == searchEntry)
         {
-            std::cout << "Entry found: " << entry->name << ", " << entry->wkn << ", " << entry->acro << std::endl;
+            std::cout << "Entry found at index " << index << ": " << entry->name << ", " << entry->wkn << ", " << entry->acro << std::endl;
             return;
         }
         entry = entry->next;
