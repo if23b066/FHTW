@@ -1,5 +1,6 @@
 #include "Programs.h"
 #include "HashTable.h"
+#include "Stock.h"
 
 Programs::Programs()
 {
@@ -35,7 +36,7 @@ void Programs::add()
             std::cout << "\nInvalid Input!" << std::endl;
         }
     }
-    HashTable *entry = new HashTable(name, wkn, acronym);
+    Stock entry * = new HashTable(name, wkn, acronym);
 
     int key = hash(std::stoi(wkn));
 }
