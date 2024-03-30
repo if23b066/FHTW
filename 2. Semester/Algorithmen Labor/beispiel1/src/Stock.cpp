@@ -7,7 +7,6 @@ Stock::Stock(std::string name, std::string wkn, std::string acronym)
     this->acronym = acronym;
 }
 
-
 Stock::~Stock()
 {
     // dtor

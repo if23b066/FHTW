@@ -1,33 +1,41 @@
 # depslib dependency file v1.0
-1711687250 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\main.cpp
+1711808323 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\main.cpp
 	<iostream>
 	"HashTable.h"
 	"Stock.h"
 	"Programs.h"
 	<iostream>
-	<vector>
 
-1711685542 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\src\stock.cpp
+1711800416 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\src\stock.cpp
 	"Stock.h"
 
-1711687601 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\include\stock.h
+1711805393 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\include\stock.h
 	<string>
 	<iostream>
+	<vector>
 
-1711685754 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\src\hashtable.cpp
+1711808695 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\src\hashtable.cpp
 	"HashTable.h"
 	<iostream>
 	<string>
 	<vector>
+	<fstream>
+	<sstream>
 
-1711686773 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\include\hashtable.h
+1711808218 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\include\hashtable.h
 	"Stock.h"
+	<iostream>
+	<string>
 	<vector>
 
-1711687176 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\include\programs.h
+1711808200 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\include\programs.h
 	"HashTable.h"
 	"Stock.h"
 
-1711687206 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\src\programs.cpp
+1711808408 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\beispiel1\src\programs.cpp
 	"Programs.h"
+	"Stock.h"
+	"HashTable.h"
+	<iostream>
+	<string>
 

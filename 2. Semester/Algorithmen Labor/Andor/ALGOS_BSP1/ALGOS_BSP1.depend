@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1711766185 source:c:\code\c\algos_bsp1\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<algorithm>
+	<vector>
+	<iomanip>
+	<cmath>
+	<unordered_map>
+

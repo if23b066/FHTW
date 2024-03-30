@@ -10,7 +10,13 @@ public:
     Programs();
     virtual ~Programs();
 
+    void reset();
+    void showMenu();
     void addFunction();
+    void printTable();
+    void removeFunction();
+    void searchFunction();
+    void importFunction();
 
 private:
     HashTable hashtable;
