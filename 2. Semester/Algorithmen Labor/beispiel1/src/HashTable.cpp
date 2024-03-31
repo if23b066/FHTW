@@ -1,4 +1,6 @@
 #include "HashTable.h"
+#include "Stock.h"
+#include "Programs.h"
 
 #include <iostream>
 #include <string>
@@ -66,7 +68,7 @@ void HashTable::import(const Stock *stock)
         std::cout << "Stock not found!" << std::endl;
         return;
     }
-    for (Stock s : table[index])
+    for (Stock &s : table[index])
     {
         if (s.acronym == stock->acronym)
         {
@@ -93,7 +95,6 @@ void HashTable::import(const Stock *stock)
                 double adjClose;
                 std::string token;
                 std::getline(ss, token, ',');
-                std::cout << token << std::endl;
                 date = token;
                 std::getline(ss, token, ',');
                 open = std::stod(token);
@@ -130,7 +131,7 @@ void HashTable::search(const Stock *stock)
         {
             if (s.history.empty())
             {
-                std::cout << "No data available for " << stock->name << " (" << stock->acronym << ")." << std::endl;
+                std::cout << "No data available for " << stock->acronym << "." << std::endl;
                 return;
             }
             else

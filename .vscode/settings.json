@@ -66,7 +66,8 @@
     "string_view": "cpp",
     "fstream": "cpp",
     "numbers": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "iomanip": "cpp"
   },
   "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
 }
