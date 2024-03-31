@@ -45,15 +45,18 @@ int main()
             break;
         case 'p':
             system("cls");
-            // plot();
+            program.plotFunction();
+            program.reset();
             break;
         case 'v':
             system("cls");
-            // save();
+            program.saveFunction();
+            program.reset();
             break;
         case 'l':
             system("cls");
-            // load();
+            program.loadFunction();
+            program.reset();
             break;
         case 'x':
             return 0;

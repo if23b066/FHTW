@@ -73,6 +73,34 @@ void Programs::searchFunction()
     hashtable.search(stock);
 }
 
+void Programs::plotFunction()
+{
+    std::string acronym;
+    std::cout << "Enter the acronym of the stock you want to plot: ";
+    std::cin >> acronym;
+
+    Stock *stock = new Stock("", "", acronym);
+    hashtable.plot(stock);
+}
+
+void Programs::saveFunction()
+{
+    std::string filename;
+    std::cout << "Enter the filename you want to save the data in: ";
+    std::cin >> filename;
+
+    hashtable.save(filename);
+}
+
+void Programs::loadFunction()
+{
+    std::string filename;
+    std::cout << "Enter the filename you want to load the data from: ";
+    std::cin >> filename;
+
+    hashtable.load(filename);
+}
+
 Programs::~Programs()
 {
     // dtor

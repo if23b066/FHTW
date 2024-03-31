@@ -17,6 +17,9 @@ public:
     void removeFunction();
     void searchFunction();
     void importFunction();
+    void plotFunction();
+    void saveFunction();
+    void loadFunction();
 
 private:
     HashTable hashtable;

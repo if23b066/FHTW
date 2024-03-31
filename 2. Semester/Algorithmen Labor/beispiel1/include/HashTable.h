@@ -19,6 +19,9 @@ public:
     void remove(const Stock *stock);
     void search(const Stock *stock);
     void import(const Stock *stock);
+    void plot(const Stock *stock);
+    void save(const std::string filename);
+    void load(const std::string filename);
 
     static const int TABLESIZE = 100;
     std::vector<std::vector<Stock>> table;

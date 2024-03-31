@@ -12,8 +12,8 @@ struct StockData
     double high;
     double low;
     double close;
-    int volume;
     double adjClose;
+    int volume;
 };
 
 class Stock
