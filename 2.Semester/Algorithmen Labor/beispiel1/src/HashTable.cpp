@@ -33,25 +33,12 @@ void HashTable::add(const Stock *stock)
     table[index].push_back(*stock);
 }
 
-void HashTable::print()
-{
-    for (int i = 0; i < TABLESIZE; i++)
-    {
-        std::cout << i << ": ";
-        for (Stock stock : table[i])
-        {
-            std::cout << stock.acronym << " ";
-        }
-        std::cout << std::endl;
-    }
-}
-
 void HashTable::remove(const Stock *stock)
 {
     int index = hash(stock->acronym);
     if (table[index].empty())
     {
-        std::cout << "Stock not found!" << std::endl;
+        std::cout << "\nStock not found!" << std::endl;
         return;
     }
     for (std::vector<Stock>::size_type i = 0; i < table[index].size(); i++)
@@ -61,6 +48,7 @@ void HashTable::remove(const Stock *stock)
             table[index].erase(table[index].begin() + i);
         }
     }
+    std::cout << "\nStock has been removed!" << std::endl;
 }
 
 void HashTable::import(const Stock *stock)
@@ -68,7 +56,7 @@ void HashTable::import(const Stock *stock)
     int index = hash(stock->acronym);
     if (table[index].empty())
     {
-        std::cout << "Stock not found!" << std::endl;
+        std::cout << "\nStock not found!" << std::endl;
         return;
     }
     for (Stock &s : table[index])
@@ -106,17 +94,16 @@ void HashTable::import(const Stock *stock)
                 std::getline(ss, token, ',');
                 low = std::stod(token);
                 std::getline(ss, token, ',');
-                // std::cout << token << std::endl;
                 close = std::stod(token);
                 std::getline(ss, token, ',');
                 adjClose = std::stod(token);
                 std::getline(ss, token, ',');
                 volume = std::stoi(token);
-                // std::cout << token << std::endl;
                 StockData data = {date, open, high, low, close, adjClose, volume};
                 s.history.push_back(data);
             }
             file.close();
+            std::cout << "\nStock has been imported!" << std::endl;
             return;
         }
     }
@@ -127,7 +114,7 @@ void HashTable::search(const Stock *stock)
     int index = hash(stock->acronym);
     if (table[index].empty())
     {
-        std::cout << "Stock not found!" << std::endl;
+        std::cout << "\nStock not found!" << std::endl;
         return;
     }
     for (Stock s : table[index])
@@ -136,13 +123,14 @@ void HashTable::search(const Stock *stock)
         {
             if (s.history.empty())
             {
-                std::cout << "No data available for " << stock->acronym << "." << std::endl;
+                std::cout << "\nNo data available for " << stock->acronym << "." << std::endl;
                 return;
             }
             else
             {
                 StockData &latestData = s.history.back();
-                std::cout << "Latest data for " << s.name << " (" << s.acronym << "):\n";
+                std::cout << "\nLatest data for " << s.name << " (" << s.acronym << "):\n";
+                std::cout << "--------------------------------" << std::endl;
                 std::cout << "Date: " << latestData.date << ", Open: " << latestData.open << ", High: " << latestData.high
                           << ", Low: " << latestData.low << ", Close: " << latestData.close << ", Volume: " << latestData.volume
                           << ", Adj Close: " << latestData.adjClose << std::endl;
@@ -158,7 +146,7 @@ void HashTable::plot(const Stock *stock)
     int index = hash(stock->acronym);
     if (table[index].empty())
     {
-        std::cout << "Stock not found!" << std::endl;
+        std::cout << "\nStock not found!" << std::endl;
         return;
     }
     for (Stock s : table[index])
@@ -167,14 +155,15 @@ void HashTable::plot(const Stock *stock)
         {
             if (s.history.empty())
             {
-                std::cout << "No data available for " << stock->acronym << "." << std::endl;
+                std::cout << "\nNo data available for " << stock->acronym << "." << std::endl;
                 return;
             }
             else
             {
 
                 std::cout << "\nPlotting closing prices for " << stock->acronym << ":" << std::endl;
-                std::cout << "Date           Close" << std::endl;
+                std::cout << "--------------------------------" << std::endl;
+                std::cout << "   Date         Close" << std::endl;
                 for (int i = std::max(0, static_cast<int>(s.history.size()) - 30); i < s.history.size(); ++i)
                 {
                     if (s.history[i].close < minClose)
@@ -200,17 +189,16 @@ void HashTable::plot(const Stock *stock)
 
 void HashTable::save(const std::string filename)
 {
-    std::string filePath = "saves/" + filename + ".txt"; // Pfad zur Datei im "saves" Ordner
+    std::string filePath = "saves/" + filename + ".txt";
 
-    std::ofstream outputFile(filePath); // Output-Dateistream erstellen
+    std::ofstream outputFile(filePath);
 
-    if (!outputFile.is_open()) // Überprüfen, ob die Datei geöffnet werden konnte
+    if (!outputFile.is_open())
     {
-        std::cerr << "Error: Unable to create or open file." << std::endl;
+        std::cerr << "\nError: Unable to create or open file." << std::endl;
         return;
     }
 
-    // Schreiben der Daten in die Datei
     for (const auto &bucket : table)
     {
         for (const Stock &stock : bucket)
@@ -221,54 +209,52 @@ void HashTable::save(const std::string filename)
                 outputFile << data.date << "," << data.open << "," << data.high << "," << data.low << ","
                            << data.close << "," << data.volume << "," << data.adjClose << std::endl;
             }
-            outputFile << std::endl; // Trennzeichen zwischen den einzelnen Aktien
+            outputFile << std::endl;
         }
     }
 
-    outputFile.close(); // Dateistream schließen
-    std::cout << "Data saved successfully to " << filePath << std::endl;
+    outputFile.close();
+    std::cout << "\nData saved successfully to " << filePath << std::endl;
 }
 
 void HashTable::load(const std::string filename)
 {
-    std::string filePath = "saves/" + filename + ".txt"; // Pfad zur Datei im "saves" Ordner
+    std::string filePath = "saves/" + filename + ".txt";
 
-    std::ifstream inputFile(filePath); // Input-Dateistream erstellen
+    std::ifstream inputFile(filePath);
 
-    if (!inputFile.is_open()) // Überprüfen, ob die Datei geöffnet werden konnte
+    if (!inputFile.is_open())
     {
-        std::cerr << "Error: Unable to open file." << std::endl;
+        std::cerr << "\nError: Unable to open file." << std::endl;
         return;
     }
 
-    // Daten einlesen und in die Hashtabelle laden
     std::string line;
     std::string stockName, wkn, acronym;
     std::vector<StockData> history;
     while (std::getline(inputFile, line))
     {
-        if (line.empty()) // Leere Zeile trennt die Aktien
+        if (line.empty())
         {
-            if (!stockName.empty()) // Aktie hinzufügen, wenn nicht leer
+            if (!stockName.empty())
             {
                 Stock stock(stockName, wkn, acronym);
                 stock.history = history;
-                add(&stock); // Aktie zur Hashtabelle hinzufügen
-                // Zurücksetzen der Variablen für die nächste Aktie
+                add(&stock);
                 stockName.clear();
                 wkn.clear();
                 acronym.clear();
                 history.clear();
             }
         }
-        else if (stockName.empty()) // Erste Zeile: Name, WKN, Akronym der Aktie
+        else if (stockName.empty())
         {
             std::istringstream iss(line);
             std::getline(iss, stockName, ',');
             std::getline(iss, wkn, ',');
             std::getline(iss, acronym, ',');
         }
-        else // Datenzeilen für die Aktie
+        else
         {
             std::istringstream iss(line);
             StockData data;
@@ -290,8 +276,8 @@ void HashTable::load(const std::string filename)
         }
     }
 
-    inputFile.close(); // Dateistream schließen
-    std::cout << "Data loaded successfully from " << filePath << std::endl;
+    inputFile.close();
+    std::cout << "\nData loaded successfully from " << filePath << std::endl;
 }
 
 HashTable::~HashTable()

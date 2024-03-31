@@ -22,15 +22,12 @@ int main()
         case 'a':
             system("cls");
             program.addFunction();
-            std::cout << "\nStock has been added!" << std::endl;
-            std::cout << "\n";
-            program.printTable();
+            std::cout << "\nStock has been added!\n";
             program.reset();
             break;
         case 'd':
             system("cls");
             program.removeFunction();
-            program.printTable();
             program.reset();
             break;
         case 'i':
@@ -61,7 +58,9 @@ int main()
         case 'x':
             return 0;
         default:
+            system("cls");
             std::cout << "Invalid choice" << std::endl;
+            program.reset();
             break;
         }
     }

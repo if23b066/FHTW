@@ -15,7 +15,6 @@ public:
 
     int hash(std::string key);
     void add(const Stock *stock);
-    void print();
     void remove(const Stock *stock);
     void search(const Stock *stock);
     void import(const Stock *stock);

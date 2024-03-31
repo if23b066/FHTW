@@ -17,6 +17,7 @@ void Programs::showMenu()
 
 void Programs::reset()
 {
+    std::cout << "\n";
     system("pause");
     system("cls");
 }
@@ -36,11 +37,6 @@ void Programs::addFunction()
 
     Stock *newStock = new Stock(name, wkn, acronym);
     hashtable.add(newStock);
-}
-
-void Programs::printTable()
-{
-    hashtable.print();
 }
 
 void Programs::removeFunction()
