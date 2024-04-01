@@ -89,3 +89,48 @@
 	<cmath>
 	<limits>
 
+1711926811 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\src\stock.cpp
+	"Stock.h"
+
+1711926817 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\include\stock.h
+	<string>
+	<iostream>
+	<vector>
+
+1711986925 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\main.cpp
+	<iostream>
+	"HashTable.h"
+	"Stock.h"
+	"Programs.h"
+	<iostream>
+
+1711986936 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\include\hashtable.h
+	"Stock.h"
+	<iostream>
+	<string>
+	<vector>
+
+1711986821 c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\include\programs.h
+	"HashTable.h"
+	"Stock.h"
+
+1711986798 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\src\hashtable.cpp
+	"HashTable.h"
+	"Stock.h"
+	"Programs.h"
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	<sstream>
+	<iomanip>
+	<cmath>
+	<limits>
+
+1711986901 source:c:\users\armin\documents\github\fhtw\2. semester\algorithmen labor\programmierbeispiel 1\beispiel1\src\programs.cpp
+	"Programs.h"
+	"Stock.h"
+	"HashTable.h"
+	<iostream>
+	<string>
+

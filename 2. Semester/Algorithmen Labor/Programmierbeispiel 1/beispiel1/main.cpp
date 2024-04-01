@@ -23,11 +23,13 @@ int main()
             system("cls");
             program.addFunction();
             std::cout << "\nStock has been added!\n";
+            // program.printTable();
             program.reset();
             break;
         case 'd':
             system("cls");
             program.removeFunction();
+            // program.printTable();
             program.reset();
             break;
         case 'i':

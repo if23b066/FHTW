@@ -13,6 +13,8 @@ public:
     HashTable();
     virtual ~HashTable();
 
+    void print();
+
     int hash(std::string key);
     void add(const Stock *stock);
     void remove(const Stock *stock);

@@ -13,6 +13,8 @@ public:
     void reset();
     void showMenu();
 
+    void printTable();
+
     void addFunction();
     void removeFunction();
     void searchFunction();
