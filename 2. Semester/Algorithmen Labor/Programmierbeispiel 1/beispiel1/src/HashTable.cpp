@@ -27,6 +27,19 @@ int HashTable::hash(std::string key)
     return index;
 }
 
+void HashTable::print()
+{
+    for (int i = 0; i < TABLESIZE; i++)
+    {
+        std::cout << i << ": ";
+        for (Stock stock : table[i])
+        {
+            std::cout << stock.acronym << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
 void HashTable::add(const Stock *stock)
 {
     int index = hash(stock->acronym);

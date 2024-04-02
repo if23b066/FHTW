@@ -10,6 +10,11 @@ Programs::Programs()
     // ctor
 }
 
+void Programs::printTable()
+{
+    hashtable.print();
+}
+
 void Programs::showMenu()
 {
     std::cout << "ADD (a)\nDELETE(d)\nIMPORT(i)\nSEARCH(s)\nPLOT(p)\nSAVE(v)\nLOAD(l)\nQUIT(x)" << std::endl;
