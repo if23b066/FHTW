@@ -13,7 +13,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -23,7 +22,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,13 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Miner.h" />
-		<Unit filename="include/World.h" />
+		<Unit filename="deepminer.depend" />
+		<Unit filename="deepminer.layout" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Miner.cpp" />
-		<Unit filename="src/World.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

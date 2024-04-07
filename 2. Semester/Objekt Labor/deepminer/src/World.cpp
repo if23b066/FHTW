@@ -1,40 +1,54 @@
 #include "World.h"
+#include "Miner.h"
 
-World::World()
-{
-    // ctor
-}
+#include <iostream>
+#include <ctime>
 
-void World::generateWorld()
+World::World(int gamemode)
 {
-    for (int y = 0; y < 5; y++)
+    srand(time(NULL));
+
+    world.resize(length, std::vector<std::vector<int>>(width, std::vector<int>(height, 'X')));
+    for (int z = 0; z < height; z++)
     {
-        for (int x = 0; x < 5; x++)
+        for (int y = 0; y < width; y++)
         {
-            int randomNum = rand() % 10;
-            if (randomNum < 4)
+            for (int x = 0; x < length; x++)
             {
-                world[y][x] = '_';
-            }
-            else if (randomNum < 8)
-            {
-                world[y][x] = 'G';
-            }
-            else if (randomNum < 9)
-            {
-                world[y][x] = 'B';
-            }
-            else
-            {
-                world[y][x] = 'R';
-                relics++;
+                world[x][y][z] = rand() % 9 + 1;
             }
         }
     }
-    if (relics == 0)
+    this->gamemode = gamemode;
+}
+
+void World::status(Miner &player, Miner &cpu)
+{
+    std::cout << "Player: " << player.getX() << " " << player.getY() << " Level: " << player.getZ() << std::endl;
+    std::cout << "CPU: " << cpu.getX() << " " << cpu.getY() << " Level: " << cpu.getZ() << std::endl;
+}
+
+void World::printWorld()
+{
+    for (int z = 0; z < height; z++)
     {
-        generateWorld();
+        std::cout << "Level " << z + 1 << std::endl;
+        for (int y = 0; y < width; y++)
+        {
+            for (int x = 0; x < length; x++)
+            {
+                std::cout << world[x][y][z] << " ";
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
     }
+}
+
+void World::updateWorld(Miner &player, Miner &cpu)
+{
+    world[player.getX()][player.getY()][player.getZ()] = 0;
+    world[cpu.getX()][cpu.getY()][cpu.getZ()] = 0;
 }
 
 World::~World()
