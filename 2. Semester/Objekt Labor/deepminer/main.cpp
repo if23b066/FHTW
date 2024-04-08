@@ -54,7 +54,8 @@ int main()
                 std::cout << "Invalid Input" << std::endl;
             }
             enemy->randomMove();
-            world.updateWorld(player, enemy);
+            world.mineField(player, enemy);
+            world.updateWorld();
             world.printWorld(player, enemy);
         }
     }
@@ -74,7 +75,8 @@ int main()
             }
             player->randomMove();
             enemy->randomMove();
-            world.updateWorld(player, enemy);
+            world.mineField(player, enemy);
+            world.updateWorld();
             world.printWorld(player, enemy);
         }
     }

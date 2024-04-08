@@ -27,12 +27,12 @@ void World::printWorld(Miner *player, Miner *enemy)
 {
     int z = 9;
     std::cout << "\033c";
-    std::cout << "+";
+    std::cout << "O";
     for (int i = 0; i < 5; ++i)
     {
         std::cout << "--";
     }
-    std::cout << "-+" << std::endl;
+    std::cout << "-O" << std::endl;
     for (int y = 0; y < width; y++)
     {
         std::cout << "| ";
@@ -44,11 +44,11 @@ void World::printWorld(Miner *player, Miner *enemy)
             }
             else if (player->getX() == x && player->getY() == y)
             {
-                std::cout << "\033[1;31m" << world[x][y][z] << "\033[0m ";
+                std::cout << "\033[1;32m" << world[x][y][z] << "\033[0m ";
             }
             else if (enemy->getX() == x && enemy->getY() == y)
             {
-                std::cout << "\033[1;32m" << world[x][y][z] << "\033[0m ";
+                std::cout << "\033[1;31m" << world[x][y][z] << "\033[0m ";
             }
             else
             {
@@ -57,12 +57,12 @@ void World::printWorld(Miner *player, Miner *enemy)
         }
         std::cout << "|" << std::endl;
     }
-    std::cout << "+";
+    std::cout << "O";
     for (int i = 0; i < 5; ++i)
     {
         std::cout << "--";
     }
-    std::cout << "-+" << std::endl;
+    std::cout << "-O" << std::endl;
     std::string playerType;
     switch (player->getType())
     {
@@ -108,7 +108,7 @@ void World::printWorld(Miner *player, Miner *enemy)
     }
 }
 
-void World::updateWorld(Miner *player, Miner *enemy)
+void World::mineField(Miner *player, Miner *enemy)
 {
     if (player->getType() == 1)
     {
@@ -179,6 +179,32 @@ void World::updateWorld(Miner *player, Miner *enemy)
             world[enemy->getX()][enemy->getY()][i] = world[enemy->getX()][enemy->getY()][i - 1];
         }
         world[enemy->getX()][enemy->getY()][0] = 0;
+    }
+}
+
+void World::updateWorld()
+{
+    for (int x = 0; x < length; x++)
+    {
+        for (int y = 0; y < width; y++)
+        {
+            int random = rand() % 3;
+            switch (random)
+            {
+            case 0:
+                shuffle(world[x][y]);
+                otherSort(world[x][y]);
+                break;
+            case 1:
+                sort(world[x][y], true);
+                otherSort(world[x][y]);
+                break;
+            case 2:
+                sort(world[x][y], false);
+                otherSort(world[x][y]);
+                break;
+            }
+        }
     }
 }
 
