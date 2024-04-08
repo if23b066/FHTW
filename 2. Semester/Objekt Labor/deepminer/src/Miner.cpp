@@ -4,16 +4,15 @@
 #include "World.h"
 #include "Miner.h"
 
-Miner::Miner(int x, int y, int z, int score, int type)
+Miner::Miner(int x, int y, int score, int type)
 {
     this->x = x;
     this->y = y;
-    this->z = z;
     this->score = score;
     this->type = type;
 }
 
-void Miner::move(char direction)
+int Miner::move(char direction)
 {
     switch (direction)
     {
@@ -45,14 +44,20 @@ void Miner::move(char direction)
             x++;
         }
         break;
+    case 'F':
+    case 'f':
+        break;
     default:
+        return 1;
         break;
     }
+    return 0;
 }
 
-void Miner::randomMove(char direction)
+int Miner::randomMove()
 {
-    switch (direction)
+    int random = rand() % 5;
+    switch (random)
     {
     case 0:
         if (y > 0)
@@ -81,8 +86,10 @@ void Miner::randomMove(char direction)
     case 4:
         break;
     default:
+        return 1;
         break;
     }
+    return 0;
 }
 
 Miner::~Miner()

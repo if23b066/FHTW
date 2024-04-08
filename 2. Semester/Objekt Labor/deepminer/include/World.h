@@ -11,9 +11,8 @@ public:
     World(int gamemode);
     virtual ~World();
 
-    void status(Miner &player, Miner &cpu);
-    void printWorld();
-    void updateWorld(Miner &player, Miner &cpu);
+    void printWorld(Miner *player, Miner *enemy);
+    void updateWorld(Miner *player, Miner *enemy);
 
 private:
     int gamemode;

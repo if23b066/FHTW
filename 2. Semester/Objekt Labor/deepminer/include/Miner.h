@@ -4,21 +4,20 @@
 class Miner
 {
 public:
-    Miner(int x, int y, int z, int score, int type);
+    Miner(int x, int y, int score, int type);
     virtual ~Miner();
 
-    void move(char direction);
-    void randomMove(char direction);
-    void moveDown();
+    int move(char direction);
+    int randomMove();
     int getX() { return x; }
     int getY() { return y; }
-    int getZ() { return z; }
     int getScore() { return score; }
+    int getType() { return type; }
+    void setScore(int score) { this->score = score; }
 
 private:
     int x;
     int y;
-    int z;
     int score;
     int type;
     char direction;

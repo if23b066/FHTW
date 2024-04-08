@@ -23,28 +23,60 @@ int main()
         std::cout << "Invalid choice! Please enter 1 or 2!" << std::endl;
     }
 
+    system("cls");
     if (gamemode == 1)
     {
-        Miner player(0, 0, 0, 0, 0);
-        Miner cpu(4, 4, 0, 0, 1);
-
-        world.printWorld();
-        world.status(player, cpu);
-
-        char direction;
-        do
+        std::cout << "Choose your Miner:" << std::endl;
+        std::cout << "\n(1) Sorting-Miner \n(2) Tri-Miner \n(3) AvgMiner" << std::endl;
+        int miner;
+        std::cout << "\nEnter your choice: ";
+        std::cin >> miner;
+        while (miner < 1 || miner > 3)
         {
-            std::cout << "\n(w) Up (s) Down (a) Left (d) Right" << std::endl;
-            std::cout << "Enter your move: ";
-            std::cin >> direction;
-            player.move(direction);
-            cpu.randomMove(direction);
-
-            system("cls");
-            world.updateWorld(player, cpu);
-            world.printWorld();
-            world.status(player, cpu);
-        } while (direction != 'x' && direction != 'X');
+            std::cout << "Invalid Input. Please enter 1, 2, or 3." << std::endl;
+            std::cin >> miner;
+        }
+        Miner *player = new Miner(0, 0, 0, miner);
+        Miner *enemy = new Miner(4, 4, 0, rand() % 3 + 1);
+        world.printWorld(player, enemy);
+        char input;
+        while (true)
+        {
+            std::cout << "\n";
+            std::cout << "\nW (Up), A (Left), S (Down), D (Right), F (Stand Still), X (End)" << std::endl;
+            std::cin >> input;
+            if (input == 'x')
+            {
+                break;
+            }
+            if (player->move(input) == 1)
+            {
+                std::cout << "Invalid Input" << std::endl;
+            }
+            enemy->randomMove();
+            world.updateWorld(player, enemy);
+            world.printWorld(player, enemy);
+        }
+    }
+    else if (gamemode == 2)
+    {
+        Miner *player = new Miner(0, 0, 0, rand() % 3 + 1);
+        Miner *enemy = new Miner(4, 4, 0, rand() % 3 + 1);
+        world.printWorld(player, enemy);
+        char input = ' ';
+        while (true)
+        {
+            std::cout << "\n";
+            system("pause");
+            if (input == 'x')
+            {
+                break;
+            }
+            player->randomMove();
+            enemy->randomMove();
+            world.updateWorld(player, enemy);
+            world.printWorld(player, enemy);
+        }
     }
 
     return 0;

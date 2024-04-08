@@ -34,9 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Functions.h" />
 		<Unit filename="include/Miner.h" />
 		<Unit filename="include/World.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Functions.cpp" />
 		<Unit filename="src/Miner.cpp" />
 		<Unit filename="src/World.cpp" />
 		<Extensions>

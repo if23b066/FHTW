@@ -1,22 +1,32 @@
 # depslib dependency file v1.0
-1712504706 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\main.cpp
+1712580255 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\main.cpp
 	"World.h"
 	"Miner.h"
 	<iostream>
 
-1712503943 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\src\miner.cpp
+1712578208 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\src\miner.cpp
 	<iostream>
 	<cstdlib>
-	"Miner.h"
-
-1712504874 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\include\miner.h
-
-1712504636 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\src\world.cpp
 	"World.h"
 	"Miner.h"
+
+1712578227 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\include\miner.h
+
+1712580214 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\src\world.cpp
+	"World.h"
+	"Miner.h"
+	"Functions.h"
 	<iostream>
 	<ctime>
 
-1712504657 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\include\world.h
+1712580193 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\include\world.h
 	<vector>
+
+1712578248 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\include\functions.h
+	<iostream>
+	<vector>
+	<algorithm>
+	<functional>
+
+1712578265 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\deepminer\src\functions.cpp
 
