@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1712836177 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\threadsbot\main.cpp
+	"Dimension.h"
+	"Bots.h"
+	<iostream>
+
+1712835946 c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\threadsbot\include\dimension.h
+	<vector>
+
+1712836201 c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\threadsbot\include\bots.h
+	"Dimension.h"
+
+1712833737 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\threadsbot\src\bots.cpp
+	"Bots.h"
+
+1712835048 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\threadsbot\src\dimension.cpp
+	"Dimension.h"
+	<iostream>
+	<vector>
+
