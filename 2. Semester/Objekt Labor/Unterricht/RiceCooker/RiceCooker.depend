@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1713274192 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\main.cpp
+	<iostream>
+	"Reiskocher.h"
+	"Reis.h"
+	"Sushireis.h"
+	"Wildreis.h"
+
+1713274175 c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\include\reiskocher.h
+	"Reis.h"
+	"Sushireis.h"
+	"Wildreis.h"
+
+1713274276 c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\include\reis.h
+
+1713273587 c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\include\sushireis.h
+	<iostream>
+	"Reis.h"
+
+1713273534 c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\include\wildreis.h
+	<iostream>
+	"Reis.h"
+
+1713274128 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\src\reiskocher.cpp
+	"Reiskocher.h"
+
+1713274690 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\src\sushireis.cpp
+	<iostream>
+	"Sushireis.h"
+	"Reis.h"
+
+1713273755 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\src\wildreis.cpp
+	<iostream>
+	"Wildreis.h"
+
+1713274666 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\unterricht\ricecooker\src\reis.cpp
+	<iostream>
+	"Reis.h"
+
