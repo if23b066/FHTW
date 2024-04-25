@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1714040715 source:c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbeispiel 2\beispiel2\main.cpp
+	<iostream>
+	<string>
+	"Tree.h"
+
+1714040049 c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbeispiel 2\beispiel2\include\tree.h
+
+1714040604 source:c:\users\naser\documents\fhtw\2. semester\algorithmen labor\programmierbeispiel 2\beispiel2\src\tree.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	"Tree.h"
+
