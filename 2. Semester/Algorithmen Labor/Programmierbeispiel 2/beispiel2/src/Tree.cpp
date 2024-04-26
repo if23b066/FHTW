@@ -5,20 +5,16 @@
 
 #include "Tree.h"
 
-void Tree::treecheck()
+void Tree::treecheck(std::string *filename)
 {
-    std::string filename;
-    std::cout << "Enter file you want to check: ";
-    std::cin >> filename;
     system("cls");
-
-    std::string filePath = "files/" + filename;
+    std::string filePath = "files/" + *filename;
     std::ifstream inputFile(filePath);
     std::string line;
 
     if (inputFile.is_open())
     {
-        std::cout << "File: " << filename << ":\n\n";
+        std::cout << "File: " << *filename << ":\n\n";
 
         while (std::getline(inputFile, line))
         {
@@ -29,6 +25,6 @@ void Tree::treecheck()
     }
     else
     {
-        std::cout << "Failed to open the file. Check if the files is included in the \"files\" folder" << std::endl;
+        std::cout << "Failed to open the file. Check if the files is included in the \"files\" folder\n\n";
     }
 }

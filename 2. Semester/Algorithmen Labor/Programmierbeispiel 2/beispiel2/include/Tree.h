@@ -11,7 +11,7 @@ struct TreeNode
 class Tree
 {
 public:
-    void treecheck();
+    void treecheck(std::string *filename);
 };
 
 #endif // TREE_H
