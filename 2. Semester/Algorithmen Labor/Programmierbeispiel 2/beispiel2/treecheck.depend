@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1714251001 source:c:\code\cpp\algos_ue2\treecheck\main.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+	<fstream>
+	<set>
+	<queue>
+	<stack>
+
+1714332770 source:c:\users\armin\documents\uni\2. semester\algos\bsp2\algosue2\main.cpp
+	<iostream>
+	<algorithm>
+	<fstream>
+	<set>
+	"BinaryTree.h"
+
+1714332814 c:\users\armin\documents\uni\2. semester\algos\bsp2\algosue2\include\binarytree.h
+
+1714332824 source:c:\users\armin\documents\uni\2. semester\algos\bsp2\algosue2\src\binarytree.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+	<fstream>
+	<set>
+	<stack>
+	<queue>
+	"BinaryTree.h"
+
+1714344668 source:c:\code\cpp\algosue2\main.cpp
+	<iostream>
+	<algorithm>
+	<fstream>
+	<set>
+	"BinaryTree.h"
+
+1714345374 c:\code\cpp\algosue2\include\binarytree.h
+	<string>
+
+1714345372 source:c:\code\cpp\algosue2\src\binarytree.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+	<fstream>
+	<set>
+	<stack>
+	<string>
+	"BinaryTree.h"
+
