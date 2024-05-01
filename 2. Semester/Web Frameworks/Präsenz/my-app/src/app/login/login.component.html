@@ -34,7 +34,11 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Confirm password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" />
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        [formControl]="passwordConfirm"
+      />
       <button
         mat-icon-button
         matSuffix
@@ -54,6 +58,10 @@
   </div>
 </section>
 
+<!-- Debug Purpose only, can be deleted afterwards-->
 <span id="email">{{ email.value }}</span>
 <br />
 <span id="password">{{ password.value }}</span>
+<br />
+<span id="passwordConfirm">{{ passwordConfirm.value }}</span>
+<!-- Debug Purpose only, can be deleted afterwards-->
