@@ -30,6 +30,14 @@ import { MatSelectModule } from '@angular/material/select';
 })
 export class RegistrationComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [
+    Validators.minLength(8),
+    Validators.required,
+  ]);
+  confirmPassword = new FormControl('', [
+    Validators.minLength(8),
+    Validators.required,
+  ]);
   company = new FormControl('FH Technikum Wien');
   postalcode = new FormControl('', [Validators.pattern('^[0-9]*$')]);
 
@@ -51,4 +59,31 @@ export class RegistrationComponent {
     }
   }
   hide = true;
+
+  register() {
+    if (this.password.value !== this.confirmPassword.value) {
+      console.log('Passwords do not match');
+      window.alert('Passwords do not match');
+    }
+    if (
+      this.email.value === '' ||
+      this.password.value === '' ||
+      this.confirmPassword.value === '' ||
+      this.company.value === '' ||
+      this.postalcode.value === ''
+    ) {
+      console.log('Some fields are missing');
+      window.alert('Some fields are missing');
+    }
+    if (
+      this.email.valid &&
+      this.password.valid &&
+      this.confirmPassword.valid &&
+      this.company.valid &&
+      this.postalcode.valid
+    ) {
+      console.log('Registration successful');
+      window.alert('Registration successful');
+    }
+  }
 }

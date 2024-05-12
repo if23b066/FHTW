@@ -52,4 +52,19 @@ export class LoginComponent {
     }
   }
   hide = true;
+
+  login() {
+    if (this.email.value === '' || this.password.value === '') {
+      console.log('Some fields are missing');
+      window.alert('Some fields are missing');
+    } else {
+      if (this.email.valid) {
+        console.log('Login successful');
+        window.alert('Login successful');
+      } else {
+        console.log('Login failed');
+        window.alert('Login failed');
+      }
+    }
+  }
 }
