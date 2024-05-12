@@ -1,3 +1,4 @@
+<h3>Userdata</h3>
 <div class="example-container">
   <mat-form-field>
     <mat-label>Enter your email</mat-label>
@@ -41,6 +42,7 @@
     </button>
   </mat-form-field>
 </div>
+<h3>Company and Adress</h3>
 <div class="example-container">
   <mat-form-field>
     <mat-label>Company</mat-label>
@@ -58,7 +60,7 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>Postal code</mat-label>
-    <input matInput />
+    <input matInput [formControl]="postalcode" />
   </mat-form-field>
 </div>
 <section>

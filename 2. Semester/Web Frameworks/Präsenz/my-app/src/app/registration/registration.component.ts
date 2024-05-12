@@ -31,6 +31,7 @@ import { MatSelectModule } from '@angular/material/select';
 export class RegistrationComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
   company = new FormControl('FH Technikum Wien');
+  postalcode = new FormControl('', [Validators.pattern('^[0-9]*$')]);
 
   errorMessage = '';
 
