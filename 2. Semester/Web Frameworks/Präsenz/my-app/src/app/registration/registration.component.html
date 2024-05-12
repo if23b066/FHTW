@@ -1,0 +1,68 @@
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>Enter your email</mat-label>
+    <input
+      matInput
+      placeholder="pat@example.com"
+      [formControl]="email"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (email.invalid) {
+    <mat-error>{{ errorMessage }}</mat-error>
+    }
+  </mat-form-field>
+</div>
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Confirm password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>Company</mat-label>
+    <input matInput [formControl]="company" readonly />
+  </mat-form-field>
+</div>
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>Street</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Postal code</mat-label>
+    <input matInput />
+  </mat-form-field>
+</div>
+<section>
+  <div class="example-button-row">
+    <button mat-flat-button color="primary">Register</button>
+  </div>
+</section>
