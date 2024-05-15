@@ -12,9 +12,12 @@ import { merge } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-registration',
+
   standalone: true,
   imports: [
     MatFormFieldModule,
@@ -24,7 +27,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatIconModule,
     MatButtonModule,
     MatSelectModule,
-  ],
+    CommonModule
+    ],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.scss',
 })

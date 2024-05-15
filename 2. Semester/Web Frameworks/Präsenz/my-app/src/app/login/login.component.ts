@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
 import {
   FormControl,
   Validators,
@@ -12,10 +13,11 @@ import { merge } from 'rxjs';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-login',
   standalone: true,
+
   imports: [
     MatFormFieldModule,
     MatInputModule,
@@ -25,11 +27,13 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatButtonModule,
     MatDividerModule,
+    CommonModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
+  
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('');
   passwordConfirm = new FormControl('');
