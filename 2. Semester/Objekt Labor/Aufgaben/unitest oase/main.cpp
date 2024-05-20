@@ -60,6 +60,7 @@ int main()
                 std::cout << "Der Schwierigkeitsgrad hat sich erhoeht!\n" << std::endl;
                 std::cout << "Derzeitiger Schwierigkeitsgrad: " << player->difficulty << "/5\n" << std::endl;
                 player->resetPlayer();
+                enemy->resetEnemy();
                 world->generateWorld();
                 world->displayWorld(player, enemy);
                 player->hp = 5;

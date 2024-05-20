@@ -53,3 +53,9 @@ void Enemy::enemyMove()
         break;
     }
 }
+
+void Enemy::resetEnemy()
+{
+    x = 4;
+    y = 4;
+}

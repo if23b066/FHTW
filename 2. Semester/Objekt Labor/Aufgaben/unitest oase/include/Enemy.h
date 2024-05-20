@@ -11,6 +11,7 @@ class Enemy
 
         void renderEnemy();
         void enemyMove();
+        void resetEnemy();
 
         int x;
         int y;
