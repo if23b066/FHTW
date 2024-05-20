@@ -6,44 +6,55 @@
 
 Player::Player(int x, int y)
 {
+    if(x < 0 || x >= 5 ||y < 0 || y >= 5)
+    {
+        throw std::out_of_range("Player position out of bounds");
+    }
     this->x = x;
     this->y = y;
 }
 
 void Player::move(char direction)
 {
-    switch(direction)
+    try
     {
-        case 'W':
-        case 'w':
-            if(y > 0)
-            {
-                y--;
-            }
-            break;
-        case 'A':
-        case 'a':
-            if(x > 0)
-            {
-                x--;
-            }
-            break;
-        case 'S':
-        case 's':
-            if(y < 4)
-            {
-                y++;
-            }
-            break;
-        case 'D':
-        case 'd':
-            if(x < 4)
-            {
-                x++;
-            }
-            break;
-        default:
-            break;
+        switch(direction)
+        {
+            case 'W':
+            case 'w':
+                if(y > 0)
+                {
+                    y--;
+                }
+                break;
+            case 'A':
+            case 'a':
+                if(x > 0)
+                {
+                    x--;
+                }
+                break;
+            case 'S':
+            case 's':
+                if(y < 4)
+                {
+                    y++;
+                }
+                break;
+            case 'D':
+            case 'd':
+                if(x < 4)
+                {
+                    x++;
+                }
+                break;
+            default:
+                throw std::invalid_argument("Invalid move");
+        }
+    }
+    catch(const std::invalid_argument &e)
+    {
+        std::cerr << "Caught exception: " << e.what() << "\n";
     }
 }
 

@@ -98,4 +98,3 @@ TEST_CASE("Player interaction with world elements", "[player][world]") {
     REQUIRE(player.colRelics == 1);
     REQUIRE(world.relics == 0);
 }
-

@@ -51,6 +51,8 @@ void Enemy::enemyMove()
         break;
     case 4:
         break;
+    default:
+        throw std::invalid_argument("Invalid move");
     }
 }
 
