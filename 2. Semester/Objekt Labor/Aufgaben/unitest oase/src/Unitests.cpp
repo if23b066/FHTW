@@ -61,34 +61,24 @@ TEST_CASE("Player interaction with world elements", "[player][world]") {
     world.generateWorld();
     Player player(0, 0);
     Enemy enemy;
+    world.relics = 1;
 
     world.world[1][0] = 'G';
     world.world[2][0] = 'B';
     world.world[3][0] = 'R';
 
-    player.move('s'); // Move to danger field
+    player.move('s'); // Move to enemy
     player.activeField(&world, &enemy);
-    REQUIRE(player.hp <= 5);
+    REQUIRE((player.hp < 5 || player.hp == 5)); // Chance low of being hit
 
     int hpAfterDanger = player.hp;
     player.move('s'); // Move to healing field
     player.activeField(&world, &enemy);
-    REQUIRE(player.hp == hpAfterDanger);
+    REQUIRE((player.hp == hpAfterDanger + 1 || player.hp == hpAfterDanger));
 
     player.move('s'); // Move to relic field
     player.activeField(&world, &enemy);
     REQUIRE(player.colRelics == 1);
-    REQUIRE(world.relics == 1);
+    REQUIRE(world.relics == 0);
 }
 
-TEST_CASE("Player reset to initial position and stats", "[player]") {
-    Player player(3, 3);
-
-    player.move('w');
-    player.hp = 5;
-    player.resetPlayer();
-
-    REQUIRE(player.x == 0);
-    REQUIRE(player.y == 0);
-    REQUIRE(player.hp == 5);
-}

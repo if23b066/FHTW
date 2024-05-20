@@ -59,3 +59,37 @@
 	"World.h"
 	"Enemy.h"
 
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1712841830 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\include\player.h
+
+1712841830 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\include\world.h
+
+1712841830 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\include\enemy.h
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\src\enemy.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"Enemy.h"
+	"Player.h"
+	"World.h"
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\src\player.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\oasencrawler\src\world.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
