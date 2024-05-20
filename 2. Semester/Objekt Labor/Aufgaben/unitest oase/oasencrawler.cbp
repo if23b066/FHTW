@@ -36,11 +36,15 @@
 		</Compiler>
 		<Unit filename="include/Enemy.h" />
 		<Unit filename="include/Player.h" />
+		<Unit filename="include/Unitests.hpp" />
 		<Unit filename="include/World.h" />
+		<Unit filename="include/catch_amalgamated.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Enemy.cpp" />
 		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/Unitests.cpp" />
 		<Unit filename="src/World.cpp" />
+		<Unit filename="src/catch_amalgamated.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
