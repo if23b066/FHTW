@@ -1,0 +1,454 @@
+# depslib dependency file v1.0
+1709581327 source:c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1709576037 c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\include\world.h
+
+1709576714 source:c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\src\world.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1709581310 c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\include\player.h
+
+1709581300 source:c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\src\player.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1709576673 source:c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\src\enemy.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"Enemy.h"
+	"Player.h"
+	"World.h"
+
+1709576703 c:\users\armin\documents\uni\2. semester\objekt labor\oasencrawler\oasencrawler\include\enemy.h
+
+1710953575 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\src\enemy.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"Enemy.h"
+	"Player.h"
+	"World.h"
+
+1710953575 c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\include\enemy.h
+
+1710953575 c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\include\player.h
+
+1710953575 c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\include\world.h
+
+1710953575 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\src\player.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1710953575 source:c:\users\naser\documents\fhtw\2. semester\objekt labor\oasencrawler\oasencrawler\src\world.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1712841830 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\include\player.h
+
+1712841830 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\include\world.h
+
+1712841830 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\include\enemy.h
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\src\enemy.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"Enemy.h"
+	"Player.h"
+	"World.h"
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\src\player.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1712841830 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\src\world.cpp
+	<iostream>
+	"Player.h"
+	"World.h"
+	"Enemy.h"
+
+1716218312 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\src\catch_amalgamated.cpp
+	"catch_amalgamated.hpp"
+	<windows.h>
+	<vector>
+	<exception>
+	<algorithm>
+	<cassert>
+	<cmath>
+	<cstddef>
+	<numeric>
+	<random>
+	<future>
+	<cmath>
+	<limits>
+	<fstream>
+	<cassert>
+	<stack>
+	<exception>
+	<algorithm>
+	<cassert>
+	<exception>
+	<iomanip>
+	<set>
+	<cassert>
+	<cctype>
+	<algorithm>
+	<algorithm>
+	<string>
+	<vector>
+	<ostream>
+	<chrono>
+	<cmath>
+	<iomanip>
+	<cstddef>
+	<ostream>
+	<random>
+	<string>
+	<cassert>
+	<algorithm>
+	<algorithm>
+	<ostream>
+	<fstream>
+	<string>
+	<cassert>
+	<ostream>
+	<utility>
+	<unistd.h>
+	<ostream>
+	<android/log.h>
+	<cassert>
+	<sys/types.h>
+	<unistd.h>
+	<cstddef>
+	<ostream>
+	<sys/sysctl.h>
+	<fstream>
+	<string>
+	<stdexcept>
+	<cassert>
+	<cerrno>
+	<exception>
+	<algorithm>
+	<signal.h>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<fstream>
+	<sstream>
+	<vector>
+	<crtdbg.h>
+	<cstdio>
+	<cstring>
+	<sstream>
+	<io.h>
+	<unistd.h>
+	<limits>
+	<stdexcept>
+	<cmath>
+	<ctime>
+	<random>
+	<algorithm>
+	<cstdio>
+	<sstream>
+	<vector>
+	<cassert>
+	<algorithm>
+	<vector>
+	<cstring>
+	<ostream>
+	<iostream>
+	<ostream>
+	<cstring>
+	<cctype>
+	<vector>
+	<algorithm>
+	<ostream>
+	<cstring>
+	<cstdint>
+	<algorithm>
+	<set>
+	<algorithm>
+	<cassert>
+	<algorithm>
+	<iterator>
+	<algorithm>
+	<cstring>
+	<ostream>
+	<exception>
+	<cstdint>
+	<iomanip>
+	<type_traits>
+	<algorithm>
+	<cmath>
+	<cstdlib>
+	<cstdint>
+	<sstream>
+	<iomanip>
+	<limits>
+	<regex>
+	<ostream>
+	<ostream>
+	<cstdio>
+	<algorithm>
+	<cassert>
+	<algorithm>
+	<cfloat>
+	<cstdio>
+	<ostream>
+	<iomanip>
+	<cassert>
+	<ctime>
+	<algorithm>
+	<iomanip>
+	<ostream>
+	<map>
+	<algorithm>
+	<ostream>
+	<cassert>
+	<ostream>
+
+1716218287 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\aufgaben\unitest oase\include\catch_amalgamated.hpp
+	<TargetConditionals.h>
+	<cstddef>
+	<ciso646>
+	<type_traits>
+	<string>
+	<chrono>
+	<cstddef>
+	<string>
+	<iosfwd>
+	<cassert>
+	<cstring>
+	<cassert>
+	<type_traits>
+	<chrono>
+	<chrono>
+	<iosfwd>
+	<string>
+	<vector>
+	<string>
+	<string>
+	<vector>
+	<atomic>
+	<type_traits>
+	<type_traits>
+	<type_traits>
+	<type_traits>
+	<type_traits>
+	<type_traits>
+	<vector>
+	<vector>
+	<algorithm>
+	<vector>
+	<cmath>
+	<vector>
+	<algorithm>
+	<chrono>
+	<exception>
+	<string>
+	<cmath>
+	<type_traits>
+	<vector>
+	<cstddef>
+	<type_traits>
+	<string>
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<string>
+	<vector>
+	<string_view>
+	<utility>
+	<optional>
+	<tuple>
+	<variant>
+	<ctime>
+	<ratio>
+	<chrono>
+	<type_traits>
+	<cstddef>
+	<iosfwd>
+	<iosfwd>
+	<string>
+	<string>
+	<iosfwd>
+	<string>
+	<vector>
+	<cassert>
+	<cstdint>
+	<map>
+	<string>
+	<vector>
+	<chrono>
+	<map>
+	<string>
+	<vector>
+	<cstdint>
+	<string>
+	<string>
+	<vector>
+	<cstdint>
+	<string>
+	<optional>
+	<cassert>
+	<memory>
+	<ostream>
+	<sstream>
+	<string>
+	<type_traits>
+	<vector>
+	<string>
+	<type_traits>
+	<type_traits>
+	<type_traits>
+	<iosfwd>
+	<compare>
+	<string>
+	<cstdint>
+	<cstdint>
+	<string>
+	<vector>
+	<string>
+	<vector>
+	<exception>
+	<iosfwd>
+	<exception>
+	<string>
+	<vector>
+	<tuple>
+	<cassert>
+	<cstdint>
+	<climits>
+	<cstddef>
+	<cstdint>
+	<type_traits>
+	<intrin.h>
+	<cassert>
+	<cmath>
+	<cstdint>
+	<limits>
+	<type_traits>
+	<cmath>
+	<type_traits>
+	<iterator>
+	<type_traits>
+	<map>
+	<string>
+	<vector>
+	<iosfwd>
+	<string>
+	<string>
+	<vector>
+	<exception>
+	<iosfwd>
+	<cstdint>
+	<cstddef>
+	<initializer_list>
+	<string>
+	<string>
+	<signal.h>
+	<exception>
+	<vector>
+	<vector>
+	<string>
+	<cassert>
+	<cassert>
+	<cmath>
+	<cstdint>
+	<utility>
+	<limits>
+	<algorithm>
+	<iterator>
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<string>
+	<cstdint>
+	<sstream>
+	<set>
+	<string>
+	<cstdio>
+	<iosfwd>
+	<string>
+	<string>
+	<map>
+	<string>
+	<vector>
+	<string>
+	<vector>
+	<string>
+	<cassert>
+	<cmath>
+	<algorithm>
+	<vector>
+	<exception>
+	<iosfwd>
+	<cstdint>
+	<string>
+	<iosfwd>
+	<vector>
+	<map>
+	<string>
+	<cstdint>
+	<vector>
+	<vector>
+	<string>
+	<cassert>
+	<string>
+	<vector>
+	<string>
+	<iosfwd>
+	<vector>
+	<string>
+	<string>
+	<vector>
+	<array>
+	<algorithm>
+	<string>
+	<type_traits>
+	<algorithm>
+	<functional>
+	<string>
+	<algorithm>
+	<utility>
+	<string>
+	<algorithm>
+	<map>
+	<string>
+	<vector>
+	<string>
+	<string>
+	<vector>
+	<iosfwd>
+	<string>
+	<vector>
+	<stack>
+	<type_traits>
+	<cstring>
+

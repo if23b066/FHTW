@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1710879058 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\main.cpp
+	<iostream>
+	"Fighter.h"
+	"Game.h"
+
+1710879490 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\include\fighter.h
+
+1710875533 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\src\fighter.cpp
+	<iostream>
+	"Fighter.h"
+
+1710879226 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\src\game.cpp
+	<iostream>
+	"Game.h"
+
+1710879197 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\include\game.h
+
+1710877704 source:c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\src\abilities.cpp
+	"Abilities.h"
+
+1710877732 c:\users\armin\documents\github\fhtw\2. semester\objekt labor\fightclub\fightclub\include\abilities.h
+	<string>
+
