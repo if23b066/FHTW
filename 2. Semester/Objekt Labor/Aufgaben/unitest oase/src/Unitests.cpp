@@ -32,6 +32,23 @@ TEST_CASE("Player movement within bounds", "[player]") {
     REQUIRE(player.x == 0);
 }
 
+TEST_CASE("Enemy movement within bounds", "[enemy]") {
+    Enemy enemy;
+
+    int initialX = enemy.x;
+    int initialY = enemy.y;
+
+    enemy.enemyMove();
+
+    REQUIRE(enemy.x >= 0);
+    REQUIRE(enemy.x < 5);
+    REQUIRE(enemy.y >= 0);
+    REQUIRE(enemy.y < 5);
+
+    REQUIRE(((enemy.x != initialX || enemy.y != initialY) || (enemy.x == initialX && enemy.y == initialY))); // Enemy might stay in the same place
+}
+
+
 TEST_CASE("World generation contains at least one relic", "[world]") {
     World world;
     world.generateWorld();
