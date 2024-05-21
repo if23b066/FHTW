@@ -1,5 +1,11 @@
 <h1>{{ title }}</h1>
-<h2>Login</h2>
-<app-login></app-login>
-<h2>Registration</h2>
-<app-registration></app-registration>
+<button mat-raised-button color="primary" (click)="showLogin()" style="margin-right: 10px">Login</button>
+<button mat-raised-button color="primary" (click)="showSignup()">Sign Up</button>
+<div id="login" style="display: none;">
+    <h2>Login</h2>
+    <app-login></app-login>
+</div>
+<div id="signup">
+    <h2>Registration</h2>
+    <app-registration></app-registration>
+</div>
