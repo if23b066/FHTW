@@ -28,7 +28,7 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatSelectModule,
     CommonModule
-    ],
+  ],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.scss',
 })
