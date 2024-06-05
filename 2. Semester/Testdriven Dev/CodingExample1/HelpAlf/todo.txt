@@ -1,0 +1,6 @@
+ToDo-List:
+
+#1 findSpaceship("")
+#2 findSpaceship("7, 2")
+#3 findSpaceship("0, 0")
+#4 findSpaceship("8, 0")
