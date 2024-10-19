@@ -1,0 +1,6 @@
+Sender: emma
+Subject: Client Meeting
+Message: 
+Hey Bob,
+Just a reminder about the client meeting next Monday at 3 PM.
+

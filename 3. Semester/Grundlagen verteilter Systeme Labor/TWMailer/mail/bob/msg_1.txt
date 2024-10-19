@@ -1,0 +1,6 @@
+Sender: alice
+Subject: Project Status
+Message: 
+Hi Bob,
+Just wanted to check on the project status. How are things going on your side?
+

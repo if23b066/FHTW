@@ -1,0 +1,6 @@
+Sender: john
+Subject: New Design Feedback
+Message: 
+Hi Alice,
+I’ve reviewed the new design, and it looks great. Let’s discuss some minor improvements.
+
